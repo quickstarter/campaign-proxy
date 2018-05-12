@@ -5,7 +5,6 @@ module.exports = (projectId, campaignBundle, communityBundle, summaryBundle, com
                 <meta charset="UTF-8">
                 <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
                 <link href="https://d3mlfyygrfdi2i.cloudfront.net/favicon.png?v=2" rel="icon" type="image/png">
-                <link rel="stylesheet" href="./styles.css">
                 <link rel="stylesheet" href="http://www.samgetlan.com/navbar/styles.css">
                 <link rel="stylesheet" href="http://s3-us-west-1.amazonaws.com/fec-kickstarter-campaign-module/styles.css">
                 <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/updates-and-comments/Updates/styles.css">
@@ -21,8 +20,8 @@ module.exports = (projectId, campaignBundle, communityBundle, summaryBundle, com
                   <div id="Comments" class="hidden">${commentBundle}</div>
                   <div id="Community" class="hidden">${communityBundle}</div>
                 </div>
-                <script crossorigin src="./lib/react-development.js"></script>
-                <script crossorigin src="./lib/react-dom.development.js"></script>
+                <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
                 <script src="http://www.samgetlan.com/navbar/navbarControl.js"></script>
                 <script src="/services/Campaign.js"></script>
                 <script src="/services/Community.js"></script>

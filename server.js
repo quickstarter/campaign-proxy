@@ -8,14 +8,9 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 7070;
 
-// bundles for each react component
-// const bundles = require('../public/services')
 const clientBundles = './public/services';
-// bundles for each servers
 const serverBundles = './templates/services';
-// local network address for each service
 const serviceConfig = require('./service-config.json');
-// fetch each bundle files and write new files into local directory
 const services = require('./loader.js')(clientBundles, serverBundles, serviceConfig);
 
 const React = require('react');

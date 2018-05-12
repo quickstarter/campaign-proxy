@@ -9,6 +9,6 @@ scenarios:
     - loop:
       - get:
           url: '/?{{ $randomNumber(1,1000000) }}'
-          count: 2
+      count: 2
 
           
