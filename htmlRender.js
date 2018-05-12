@@ -1,4 +1,4 @@
-module.exports = (projectId, campaignBundle, summaryBundle, commentBundle, communityBundle, navbarBundle, updateBundle) => `
+module.exports = (projectId, campaignBundle, communityBundle, summaryBundle, commentBundle, navbarBundle, updateBundle) => `
         <!DOCTYPE html>
             <html lang="en">
               <head>
@@ -25,10 +25,15 @@ module.exports = (projectId, campaignBundle, summaryBundle, commentBundle, commu
                 <script crossorigin src="./lib/react-dom.development.js"></script>
                 <script src="http://www.samgetlan.com/navbar/navbarControl.js"></script>
                 <script src="/services/Campaign.js"></script>
+                <script src="/services/Community.js"></script>
                 <script>
                   ReactDOM.hydrate(
                     React.createElement(Campaign, {projectId: ${projectId}, userId: 777}),
                     document.getElementById('Campaign')
+                  );
+                  ReactDOM.hydrate(
+                    React.createElement(Community, {projectId: ${projectId}}),
+                    document.getElementById('Community')
                   );
                 </script>
               </body>
