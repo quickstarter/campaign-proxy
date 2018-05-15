@@ -25,14 +25,18 @@ app.use(express.static('public'));
 
 const renderComponents = (components, props = {}) => Object.keys(components).map((item) => {
   const component = React.createElement(components[item], props);
+  console.log('component', component);
   return ReactDom.renderToString(component);
 });
 
 app.get('/:id', (req, res) => {
-  let components = renderComponents(services, { projectId: req.params.id });
-  res.end(template(req.params.id, components));
+  const components = renderComponents(services, { projectId: req.params.id });
+  console.log(components.length);
+  console.log(components[1]);
+  console.log(Array.isArray(components));
+  // console.log(...components);
+  res.end(template(req.params.id, ...components));
 });
-
                   
 // // sending module to proxy server
 // router.get('/campaign', (req, res) => {
