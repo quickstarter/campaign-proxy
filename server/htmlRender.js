@@ -23,18 +23,15 @@ module.exports = (projectId, campaignBundle, communityBundle, summaryBundle, com
                 <script crossorigin src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
                 <script crossorigin src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
                 <script src="/services/Campaign.js"></script>
-                <script src="/services/Community.js"></script>
+
                 <script>
                   console.log(Campaign)
-                  console.log(Community);
+
                   ReactDOM.hydrate(
                     React.createElement(Campaign, {projectId: ${projectId}, userId: 777}),
                     document.getElementById('Campaign')
                   );
-                  ReactDOM.hydrate(
-                    React.createElement(Community, {projectId: ${projectId}}),
-                    document.getElementById('Community')
-                  );
+
                 </script>
               </body>
             </html>
